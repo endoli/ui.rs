@@ -1,0 +1,11 @@
+[package]
+name = "ui"
+version = "0.0.1"
+authors = ["Bruce Mitchener <bruce.mitchener@gmail.com>"]
+license = "MIT/Apache-2.0"
+readme = "README.md"
+description = "Functionality that can be shared between user interface frameworks."
+keywords = ["ui", "user interface"]
+homepage = "https://github.com/endoli/ui.rs"
+repository = "https://github.com/endoli/ui.rs"
+documentation = "https://endoli.github.io/ui.rs/"
