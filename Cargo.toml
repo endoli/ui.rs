@@ -9,3 +9,6 @@ keywords = ["ui", "user interface"]
 homepage = "https://github.com/endoli/ui.rs"
 repository = "https://github.com/endoli/ui.rs"
 documentation = "https://endoli.github.io/ui.rs/"
+
+[dependencies]
+euclid = "0.16"

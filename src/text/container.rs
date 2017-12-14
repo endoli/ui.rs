@@ -6,7 +6,7 @@
 
 //! # Text Container
 
-use geometry::Dimensions;
+use geometry::LogicalSize;
 use super::AttributedText;
 
 /// A display container for text.
@@ -16,13 +16,13 @@ use super::AttributedText;
 /// the `TextLayout` which will position characters within the container.
 #[allow(dead_code)]
 pub struct TextContainer {
-    dimensions: Dimensions,
+    dimensions: LogicalSize,
     content: AttributedText,
 }
 
 impl TextContainer {
     /// Create a new `TextContainer` with the specified dimensions and content.
-    pub fn new(dimensions: Dimensions, content: AttributedText) -> Self {
+    pub fn new(dimensions: LogicalSize, content: AttributedText) -> Self {
         TextContainer {
             dimensions,
             content,
