@@ -4,6 +4,8 @@
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
 
+//! Let a thousand flowers bloom.
+//!
 //! Many components of user interface frameworks can be shared.
 //! This crate exists to share some common elements that are needed
 //! by many, hopefully improving functionality, correctness, and
@@ -12,12 +14,11 @@
 //! Things that we should cover or address:
 //!
 //! * Colors
-//! * Coordinate systems
+//! * Geometry and coordinate systems
+//!   * Including beziers and paths
 //! * Text styling and layout
-//!   * Spellchecking integration also
+//!   * Spellchecking integration
 //! * Input events
-//! * Beziers and paths
-//!   * Useful in constraining text areas
 //! * Animation assistants
 //!
 //! We should integrate with other UI frameworks as well as platform
