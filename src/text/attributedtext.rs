@@ -10,20 +10,11 @@ use super::Attribute;
 
 use std::ops::Range;
 
-/// A span within the text (given by a `Range`) that has been marked up
-/// with an `Attribute`.
-#[allow(dead_code)]
-#[derive(Clone, Debug)]
-pub struct AttributeSpan {
-    range: Range<usize>,
-    attribute: Attribute,
-}
-
 /// A body of text which has been marked up with attributes for style,
 /// layout, accessibility, and other features.
 #[allow(dead_code)]
 pub struct AttributedText {
-    attributes: Vec<AttributeSpan>,
+    attributes: Vec<(Range<usize>, Attribute)>,
     content: String,
 }
 
@@ -37,7 +28,7 @@ impl AttributedText {
     }
 
     /// Create a new `AttributedText` with the given content and attributes.
-    pub fn new_with_attributes<T: Into<String>>(content: T, attributes: &[AttributeSpan]) -> Self {
+    pub fn new_with_attributes<T: Into<String>>(content: T, attributes: &[(Range<usize>, Attribute)]) -> Self {
         AttributedText {
             attributes: attributes.to_vec(),
             content: content.into(),
@@ -46,6 +37,6 @@ impl AttributedText {
 
     #[allow(missing_docs)]
     pub fn add_attribute(&mut self, range: Range<usize>, attribute: Attribute) {
-        self.attributes.push(AttributeSpan { range, attribute });
+        self.attributes.push((range, attribute));
     }
 }

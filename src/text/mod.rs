@@ -14,4 +14,4 @@ mod attributedtext;
 pub use self::attributes::Attribute;
 pub use self::container::TextContainer;
 pub use self::layout::TextLayout;
-pub use self::attributedtext::{AttributeSpan, AttributedText};
+pub use self::attributedtext::AttributedText;
