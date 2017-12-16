@@ -28,7 +28,10 @@ impl AttributedText {
     }
 
     /// Create a new `AttributedText` with the given content and attributes.
-    pub fn new_with_attributes<T: Into<String>>(content: T, attributes: &[(Range<usize>, Attribute)]) -> Self {
+    pub fn new_with_attributes<T: Into<String>>(
+        content: T,
+        attributes: &[(Range<usize>, Attribute)],
+    ) -> Self {
         AttributedText {
             attributes: attributes.to_vec(),
             content: content.into(),
